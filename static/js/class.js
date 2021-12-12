@@ -3,6 +3,7 @@ $(document).ready(function() {
 
     $("#filter").click(function() {
         // alert("button clicked!");
+        $("#cloud").html("");
         makePredictions();
     });
 });
@@ -30,7 +31,7 @@ function makePredictions() {
         "vax_dose": vax_dose
     }
 
-    console.log("payload", payload)
+    // console.log("payload", payload)
 
     // Perform a POST request to the query URL
     $.ajax({
