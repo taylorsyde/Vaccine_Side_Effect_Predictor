@@ -75,15 +75,16 @@ class ModelHelper():
         # print(like_users)  
 
         # save nearest 200 neighbors symptoms as list for wordcloud
-        predicted_symptoms = data_df['ASSIGNED_GROUP'].iloc[like_users]
+        predicted_symptoms = data_df[['ASSIGNED_GROUP','SEVERITY_LEVEL']].iloc[like_users]
         predicted_symptoms = predicted_symptoms.value_counts()
-        # predicted_symptoms.head()
+        print("LOOK HERE")
+        predicted_symptoms.head()
 
         dirty_dict = predicted_symptoms.to_dict()
 
         words = []
         for key in dirty_dict:
-            x = {'x': key, 'value': dirty_dict[key]}
+            x = {'x': key[0], 'value': dirty_dict[key], 'category': key[1]}
             words.append(x)
     
         # words
