@@ -74,6 +74,7 @@ and learn about specific medical terminology associated with their predicted sid
 <li>Any Chart JS</li></ul>  
 <li>HTML</li></ul>
 <li>CSS</li></ul>
+<li>Tableau JS</li></ul> 
 <li>Flask</li></ul>   
 <li>Themefisher</li></ul>
 <li>Bootstrap</li></ul>
