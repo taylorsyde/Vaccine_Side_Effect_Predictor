@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Vaccine Side-Effect Predictor</title>
+    <!-- Boostrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/minty/bootstrap.min.css">
+    <!-- Our CSS -->
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+        <!-- JS CLoud Chart -->
+        <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+        <script src="https://cdn.anychart.com/releases/v8/js/anychart-tag-cloud.min.js"></script>
+        <script src="https://cdn.anychart.com/releases/v8/js/anychart-jquery.min.js"></script>
+        <style>
+          html, body, #cloud {
+          width: 700px;
+          height: 500px;
+          margin: 0;
+          padding: 0;
+          }
+        </style> 
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- JS -->
+    <script type="text/javascript" src="static/js/class.js"></script>
+    <!-- <script type="text/javascript" src="static/js/logic.js"></script> -->
+
+  
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">COVID-19 Vaccine Side-Effect Predictor
+                <span class="sr-only">(current)</span>
+              </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <hr style="color:lightgray; border-width: 3px;">
+    <div class="container">
+        <div class="card border-primary mb-3" style="max-width: 40rem;">
+            <div class="card-header">Machine Learning Model Inputs</div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="col-form-label" for="age_group">Age Group</label>
+                            <select id="age_group">
+                              <option value="18-25">18-25</option>
+                              <option value="26-35">26-35</option>
+                              <option value="36-45">36-45</option>
+                              <option value="46-55">46-55</option>
+                              <option value="56-65">56-65</option>
+                              <option value="66-75">66-75</option>
+                              <option value="76-85">76-85</option>
+                              <option value="86-95">86-95</option>
+                              <option value="96 +">95 +</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="sex">Sex</label>
+                            <select class="form-select" id="sex" required>
+                              <option selected>Select Sex</option>
+                              <option value='M'>Male</option>
+                              <option value='F'>Female</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="vax_name">Vaccine</label>
+                            <select class="form-select" id="vax_name" required>
+                              <option selected>Select Vaccine Name</option>
+                              <option value="PFIZER">Pfizer</option>
+                              <option value="MODERNA">Moderna</option>
+                              <option value="JANSSEN">Johnson & Johnson</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="col-form-label" for="vax_dose">Vaccine</label>
+                          <select class="form-select" id="vax_dose">
+                            <option selected>Select Dose</option>
+                            <option value='1'>First</option>
+                            <option value='2'>Second</option>
+              </select>
+                      </div>
+
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="col-form-label" for="other_meds">Taking Other Medications?</label>
+                        <select class="form-select" id="other_meds">
+                          <option selected value='0'>No</option>
+                          <option value='1'>Yes</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-form-label" for="history">Notable Medical History?</label>
+                        <select class="form-select" id="history">
+                          <option selected value='0'>No</option>
+                          <option value='1'>Yes</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-form-label" for="prior_vax">Prior Vaccine Reaction?</label>
+                        <select class="form-select" id="prior_vax">
+                          <option selected value='0'>No</option>
+                          <option value='1'>Yes</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-form-label" for="allergies">Food or Material Allergies?</label>
+                        <select class="form-select" id="allergies">
+                          <option selected value='0'>No</option>
+                          <option value='1'>Yes</option>
+                        </select>
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="button" class="btn btn-primary" id="filter">Predict Side-Effects!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr style="color:lightgray; border-width: 3px;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Your side-effects will likely be: <span><h3 class="text-center" id="output"></h3></span></h3>
+                <!-- <h1 class="text-center" id="output"></h1> -->
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+      <div class="section-title">
+        <h3>Top 20 Symptoms <span>Reported By People Most Like You</span></h3>
+      </div>
+    <div id="cloud"></div>
+
+
+<!-- script js -->
+<script src="static/js/class.js"></script>
+<!-- <script src="static/js/logic.js"></script> -->
+<script src="static/js/script.js"></script>
+</body>
+
+</html>
+
