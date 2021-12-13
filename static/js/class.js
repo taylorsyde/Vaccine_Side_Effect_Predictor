@@ -3,6 +3,7 @@ $(document).ready(function() {
 
     $("#filter").click(function() {
         // alert("button clicked!");
+        $("#pre-cloud").html("");
         $("#cloud").html("");
         makePredictions();
     });

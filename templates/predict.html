@@ -49,8 +49,8 @@
   <script src="https://cdn.anychart.com/releases/v8/js/anychart-jquery.min.js"></script>
   <style>
     #cloud {
-      width: 700px;
-      height: 500px;
+      width: 100%;
+      height: 100%;
       margin: 0;
       padding: 0;
     }
@@ -131,14 +131,17 @@
         <!-- LEFT BOX -->
         <div class="col-5">
           <div class="section-title">
-            <h3>Tell Us <span>About Yourself</span></h3>
-            <p>Don't worry, we don't store your information. We haven't figured that out yet.</p>
+            <h3>Predict<span> Your Side Effects</span></h3>
+            <p>Enter your information below to find how people like
+              you responded to the COVID-19 Vaccine.
+              Don't worry, we won't store your information.
+              (We don't even know how to do that.)</p>
             <div class="card border-primary mb-3" style="max-width: 40rem;">
 
               <div class="card-body">
                 <div class="row">
                   <div class="col-md-6">
-                    
+
                     <div class="form-group">
                       <label class="col-form-label" for="age_group">Age Group</label>
                       <select class='form-select' id="age_group" required>
@@ -175,7 +178,7 @@
                     </div>
 
                     <div class="form-group">
-                      <label class="col-form-label" for="vax_dose">Vaccine</label>
+                      <label class="col-form-label" for="vax_dose">Dose</label>
                       <select class="form-select" id="vax_dose">
                         <option selected>Select Dose</option>
                         <option value='1'>First</option>
@@ -227,19 +230,52 @@
         </div>
 
         <!-- RIGHT BOX -->
-         <div class="col-7">
-            <div class="section-title">
-              <h3><span>Your side-effects will likely be:</span></h3>
-              <h3 class="text-center" id="output"></h3>
+        <div class="col-7">
+          <div id='pre-cloud'>
+            <div class="card" style="width: 100%;">
+              <img src="../static/images/gallery/consult.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">How Does it Work?</h5>
+                <p class="card-text"> Our algorithm uses data from over 30,000 people
+                  and their post-vaccination experiences. You tell the computer a bit of
+                  yourself, and the computer tells you how you might react based on what it knows.</p>
+              </div>
             </div>
-            <div id="cloud"></div>
           </div>
+          <div class="section-title">
+            <h3><span>Your side-effects will likely be:</span></h3>
+            <h3 class="text-center" id="output"></h3>
+          </div>
+          <div id="cloud"></div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class='col-12'>
+            <div class="alert alert-warning" role="alert">
+              DISCLAIMER: THIS WEBSITE DOES NOT PROVIDE MEDICAL ADVICE
+              The information, including but not limited to, text, graphics, 
+              images and other material contained on this website are for 
+              informational purposes only. No material on this site is intended 
+              to be a substitute for professional medical advice, diagnosis or 
+              treatment. Always seek the advice of your physician or other 
+              qualified health care provider with any questions you may have 
+              regarding a medical condition or treatment and before undertaking 
+              a new health care regimen, and never disregard professional medical 
+              advice or delay in seeking it because of something you have read on 
+              this website.
+            </div>
+          </div>
+        </div>
+      </div>
+
 
 </body>
 
-          <!-- script js -->
-          <script src="static/js/class.js"></script>
-          <!-- <script src="static/js/logic.js"></script> -->
-          <!-- <script src="static/js/script.js"></script> -->
+<!-- script js -->
+<script src="static/js/class.js"></script>
+<!-- <script src="static/js/logic.js"></script> -->
+<!-- <script src="static/js/script.js"></script> -->
 
 </html>
