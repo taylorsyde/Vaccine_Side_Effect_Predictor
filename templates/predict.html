@@ -54,6 +54,10 @@
       margin: 0;
       padding: 0;
     }
+
+    #result {
+      display: none;
+    }
   </style>
   <!-- JQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -242,9 +246,9 @@
               </div>
             </div>
           </div>
-          <div class="section-title">
-            <h3><span>Your side-effects will likely be:</span></h3>
-            <h3 class="text-center" id="output"></h3>
+
+          <div class="alert alert-info text-center" role="alert" id='result'>
+            Your side-effects will likely be: <h3 class="text-center" id="output"></h3>
           </div>
           <div id="cloud"></div>
         </div>

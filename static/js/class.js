@@ -5,6 +5,7 @@ $(document).ready(function() {
         // alert("button clicked!");
         $("#pre-cloud").html("");
         $("#cloud").html("");
+        $('#result').show();
         makePredictions();
     });
 });
