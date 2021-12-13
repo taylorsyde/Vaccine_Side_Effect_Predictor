@@ -62,7 +62,7 @@ function makePredictions() {
                 var chart = anychart.tagCloud(word_pred);
 
                 // set a chart title
-                //chart.title('Top 20 Symptoms')
+                chart.title('People Like You Reported the Following Side-Effects:')
                 // set an array of angles at which the words will be laid out
                 chart.angles([0, 90])
                 // enable a color range
@@ -70,7 +70,7 @@ function makePredictions() {
                 // set the color range length
                 chart.colorRange().length('80%');
 
-                chart.textSpacing(.5)
+                chart.textSpacing(.1)
 
                 chart.tooltip().format("{%yPercentOfTotal}%");
 
