@@ -17,6 +17,11 @@ def about():
     # Return template and data
     return render_template("predict.html")
 
+@app.route("/explorer")
+def about():
+    # Return template and data
+    return render_template("explorer.html")
+
 @app.route("/visualizations")
 def effects():
     # Return template and data
