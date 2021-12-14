@@ -19,9 +19,9 @@
 
 <details>
   <summary>Table of Contents</summary>
-    <li><a href="#1 Background ">Background</a></li>
-    <li><a href="#2 Inspiration and Motivation ">Inspiration and Motivation</a></li>
-    <li><a href="#3 Our Process ">Our Process</a></li>
+    <li><a href="#Background ">Background</a></li>
+    <li><a href="#Inspiration and Motivation ">Inspiration and Motivation</a></li>
+    <li><a href="#Our Process ">Our Process</a></li>
       <ul>
          <li><a href="#Tools">Tools</a></li>
       </ul>
