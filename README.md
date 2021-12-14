@@ -25,11 +25,11 @@
       <ul>
          <li><a href="#Tools">Tools</a></li>
       </ul>
-    <li><a href="#4 Data-Clean-UP">Data Clean Up </a></li>
-    <li><a href="#5 Machine-Learning-Model">Machine Learning Model</a></li>
-    <li><a href="#6 Conclusion”>Conclusion</li>
-    <li><a href="#7 Sources">Sources</a></li>
-    <li><a href="#8 The-Team">Team</a></li>
+    <li><a href="#Data-Clean-UP">Data Clean Up </a></li>
+    <li><a href="#Machine-Learning-Model">Machine Learning Model</a></li>
+    <li><a href="#Conclusion">Conclusion</li>
+    <li><a href="#Sources">Sources</a></li>
+    <li><a href="#The-Team">Team</a></li>
   </ol>
 </details>
 
