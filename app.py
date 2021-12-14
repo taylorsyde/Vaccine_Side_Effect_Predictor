@@ -17,12 +17,12 @@ def about():
     # Return template and data
     return render_template("predict.html")
 
-@app.route("/visualizations")
+@app.route("/explorer")
 def effects():
     # Return template and data
     #change this to dictionary
     #call function
-    return render_template("viz-1.html")
+    return render_template("explorer.html")
 
 @app.route("/team")
 def dashboard():
