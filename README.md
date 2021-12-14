@@ -149,7 +149,7 @@ Challenges
   kept the KNN model to provide side effects for the user interface and our outputs for the world cloud. It was further determined to use the Logistic 
   Regression model due to the large amount of datasets gathered to ensure the correct categorical outputs for either "Mild", "Moderate" or "Severe."
      
-* Dataset for Covid side effects only from 12/21 to 3/21
+* Dataset for Covid side effects only from Dec 2020 to March 2021
 
 Future Implications
 
