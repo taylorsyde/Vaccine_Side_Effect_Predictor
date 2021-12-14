@@ -53,8 +53,8 @@ medical history and gender.  The machine learning model predicts the possible si
 
 ## **Our Process**
       
-Perform ETL, create a web-based platform to gather user inputs and return side effects they may experiece. On output a user can further define medical terms  
-and learn about specific medical terminology associated with their predicted side effects. 
+Perform ETL, create a web-based platform to gather user inputs and return side effects they may experiece. On output a user can further define medical 
+terms and learn about specific medical terminology associated with their predicted side effects. 
       
     
 ### **Tools**
