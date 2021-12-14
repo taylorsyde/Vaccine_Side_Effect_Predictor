@@ -21,7 +21,7 @@
   <summary>Table of Contents</summary>
     <li><a href="#Background ">Background</a></li>
     <li><a href="#Inspiration and Motivation ">Inspiration and Motivation</a></li>
-    <li><a href="#Our Process ">Our Process</a></li>
+    <li><a href="#Our-Process ">Our Process</a></li>
       <ul>
          <li><a href="#Tools">Tools</a></li>
       </ul>
